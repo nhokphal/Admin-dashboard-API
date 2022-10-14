@@ -5,12 +5,20 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 right: 100px;
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+margin: auto;
 `;
+
 const Wrapper = styled.div`
+border-radius: 5px;
+background-color: #E0FFFF;
 position: absolute;
 right: 1px;
-width: 170vh;
-height: 120px;
+width: 175vh;
+height: 50px;
 display: flex;
 justify-content: space-between; 
 font-size: 14;

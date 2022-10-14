@@ -1,18 +1,21 @@
 import {
-    Home,
-    LocalGroceryStore,
-    Person,
-    Leaderboard,
-    Lock,
+  Home,
+  LocalGroceryStore,
+  Person,
+  Leaderboard,
+  Lock,
 } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
 
 const Container = styled.div`
+  position: fixed;
   height: 100vh;
   width: 150px;
   margin: 0;
   padding: auto;
+  border-right: 0.5px solid lightgray;
   .hr {
     color: blue;
     border: 0.5px solid lightgray;
@@ -70,30 +73,33 @@ cursor: pointer;
 `;
 
 export default function SideBar() {
-    return (
-        <Container>
-            <Logo>Logo</Logo>
+  return (
+    <Container>
+      <Logo>Logo</Logo>
 
-            <hr />
-            <Wrapper>
+      <hr />
+      <Wrapper>
 
-                <HomeDashBoard >
-                    <Home className="icon" />
-                    Daskboard
-                </HomeDashBoard>
-                <DataTable >
-                    <Leaderboard className="icon" />
-                    Data Table
-                </DataTable >
-                <Profile >
-                    <Person className="icon" />
-                    Profile
-                </Profile>
-                <SignIn >
-                    <Lock className="icon" />
-                    Sign in
-                </SignIn>
-            </Wrapper>
-        </Container>
-    );
+        <HomeDashBoard >
+          <Home className="icon" />
+          <NavLink
+            to="/dashboard">
+            DashBoard
+          </NavLink>
+        </HomeDashBoard>
+        <DataTable >
+          <Leaderboard className="icon" />
+          Data Table
+        </DataTable >
+        <Profile >
+          <Person className="icon" />
+          Profile
+        </Profile>
+        <SignIn >
+          <Lock className="icon" />
+          Sign in
+        </SignIn>
+      </Wrapper>
+    </Container>
+  );
 }
