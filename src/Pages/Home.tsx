@@ -6,11 +6,14 @@ import { MovieDTB } from '../MoviesDTB/MovieDTB';
 
 const Container = styled.div``;
 
+const MovieCard = styled.div``;
+
 export const Home = () => {
   return (
     <Container>
-            <NavBar/>
-            <SideBar/>
+            <MovieCard>
+              <MovieCard/>
+            </MovieCard>
     </Container>
   )
 }

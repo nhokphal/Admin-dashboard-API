@@ -23,14 +23,13 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div` 
 padding: 0px 90px 0px 0px;  
-marign: 10px;
+margin: 10px;
 height: 100%;
 width: 100px;
 .icon{
     font-size: 20px;
     color: blue;
 }
-
 `;
 
 const Logo = styled.div`
@@ -38,7 +37,7 @@ const Logo = styled.div`
   height: 50px;
 `;
 const DataTable = styled.div`
-    padding-right: 0;
+    padding-right: 40%;
     cursor: pointer;
     &:hover {
       background-color: #E0FFFF;
@@ -53,7 +52,6 @@ cursor: pointer;
 }
 
 padding-right: 25px;
-
 `;
 const SignIn = styled.div`
 padding-right: 25px;
@@ -61,7 +59,6 @@ cursor: pointer;
 &:hover {
   background-color: #E0FFFF;
 }
-
   
 `;
 const HomeDashBoard = styled.div`
@@ -69,17 +66,14 @@ cursor: pointer;
 &:hover {
   background-color: #E0FFFF;
 }
-
 `;
 
 export default function SideBar() {
   return (
     <Container>
       <Logo>Logo</Logo>
-
       <hr />
       <Wrapper>
-
         <HomeDashBoard >
           <Home className="icon" />
           <NavLink
@@ -89,7 +83,10 @@ export default function SideBar() {
         </HomeDashBoard>
         <DataTable >
           <Leaderboard className="icon" />
-          Data Table
+          <NavLink
+            to="/notes">
+            Note
+          </NavLink>
         </DataTable >
         <Profile >
           <Person className="icon" />
