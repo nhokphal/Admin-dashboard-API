@@ -44,7 +44,7 @@ export const NavBar = () => {
     <Container>
       <Wrapper>
         <Home></Home>
-        <Search>Top Movie From MOVIEDB API</Search>
+        <Search>Top Movies MOVIEDB API</Search>
         <Logout></Logout>
         {/* <Logo>Logo</Logo> */}
         {/* <Logout>Logout</Logout> */}

@@ -76,6 +76,7 @@ export default function SideBar() {
       <Wrapper>
         <HomeDashBoard >
           <Home className="icon" />
+          {/* create diff route */}
           <NavLink
             to="/dashboard">
             DashBoard
@@ -88,14 +89,6 @@ export default function SideBar() {
             Note
           </NavLink>
         </DataTable >
-        <Profile >
-          <Person className="icon" />
-          Profile
-        </Profile>
-        <SignIn >
-          <Lock className="icon" />
-          Sign in
-        </SignIn>
       </Wrapper>
     </Container>
   );

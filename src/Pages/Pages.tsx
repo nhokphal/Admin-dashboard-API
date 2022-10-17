@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Home } from './Home';
-import Profile from './Profile';
-import SignIn from './SignIn';
 import Dashboard from './Dashboard';
 import { NavBar } from '../Components/NavBar';
 import SideBar from '../Components/SideBar';
@@ -21,12 +19,11 @@ export default function Pages() {
         <Container>        
             <Router>
               <SideBar />
-                <Routes>
+                <Routes> 
+                    {/* routes or switch in v6 */}
                     <Route path="/">
                         <Route index element={<Home />} />
-                        <Route path='/profile' element={<Profile />} />
                         <Route path='/dashboard' element={<Dashboard />} />
-                        <Route path='/signin' element={<SignIn />} />
                         <Route path='/notes' element={<Note />} />
                         <Route path='/notes/:id' element={<Note />} />
                         {/* handle error error */}
